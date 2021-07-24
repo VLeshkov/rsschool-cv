@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Victor Leshkov</h1>
+        <h2>Contacts</h2>
+        <p>Email: leshkovvictor@gmail.com</p>
+        <p>Telegram: @vleshkov</p>
+        <h2>About myself</h2>
+        <p>30 years old. Beginner Frontend developer. My development path began in may 2021 when I started Python
+            courses at Stepik. Currently I learn Frontent development at RS School and want to become a Junior
+            Frontend Developer.</p>
+        <h2>Skills</h2>
+        <p>Javascript, Typescript, HTML, CSS, Python, Git.</p>
+        <h2>Code Examples</h2>
+        <p>Here are some katas solutions from Codewars.</p>
+        <p><a href="https://www.codewars.com/kata/57b06f90e298a7b53d000a86/">Kata description</a><br>
+        Javascript solution:</p>
+        <pre><code>
+        function queueTime(customers, n) {
+        let tills = [];
+        for (let i = 0; i < n; i++) {
+        tills.push(0);
+        }
+
+        for (let customer of customers) {
+        tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
+        }
+
+        return Math.max.apply(null, tills);
+        }
+        </code></pre>
+        <p><a href="https://www.codewars.com/kata/52223df9e8f98c7aa7000062/">Kata description</a><br>
+        Python solution:</p>
+        <pre><code>
+        def rot13(message):
+        alphabet = ''.join([chr(i) for i in range(97,123)])
+        result = []
+
+        shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
+
+        for letter in message:
+        if letter.isalpha() == True:
+        letter_index = alphabet.find(letter.lower())
+        if letter.isupper() == True:
+        result += shifted_alphabet[letter_index].upper()
+        else:
+        result += shifted_alphabet[letter_index]
+        else:
+        result += letter
+
+        return ''.join(result)
+        </code></pre>
+        <h2>Experience</h2>
+        <p>Currently I learn Javascript at [learn.javascript.ru](https://learn.javascript.ru/) and JS/Frontend course
+            at RS School.</p>
+        <p>Certificates:</p>
+        <ol>
+            <li>Программирование на Python (Python programming).
+                <a href="https://stepik.org/cert/987494">Certificate</a></li>
+            <li>"Поколение Python": курс для начинающих (Python generation: beginners course).
+                <a href="https://stepik.org/cert/1007833">Certificate</a></li>
+        </ol>
+        <h2>Education</h2>
+        <p>Self-taught. Stepik Python courses. RSSchool Frontend.</p>
+        <h2>English level</h2>
+        <p>Advanced</p>
+    </div>
+</body>
+<footer>
+    <div class="content">
+    <p><a href="https://github.com/vleshkov/">Github</a>, 2021</p>
+    <p><img src="https://rs.school/images/rs_school_js.svg" alt="RS School logo" height="37px"></p>
+    </div>
+</footer>
+</html>
