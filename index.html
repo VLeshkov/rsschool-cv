@@ -74,18 +74,17 @@
         Javascript solution:</p>
 
         <pre><code>
-        function queueTime(customers, n) {
-          let tills = [];
-          for (let i = 0; i &lt; n; i++) {
-            tills.push(0);
-          }
+function queueTime(customers, n) {
+  let tills = [];
+  for (let i = 0; i &lt; n; i++) {
+    tills.push(0);
+  }
+  for (let customer of customers) {
+    tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
+  }
 
-          for (let customer of customers) {
-            tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
-          }
-
-          return Math.max.apply(null, tills);
-        }
+  return Math.max.apply(null, tills);
+}
         </code></pre>
 
         <p>
@@ -93,23 +92,23 @@
         Python solution:</p>
 
         <pre><code>
-        def rot13(message):
-          alphabet = ''.join([chr(i) for i in range(97,123)])
-          result = []
+def rot13(message):
+  alphabet = ''.join([chr(i) for i in range(97,123)])
+  result = []
+  shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
 
-          shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
+  for letter in message:
+    if letter.isalpha() == True:
+      letter_index = alphabet.find(letter.lower())
 
-          for letter in message:
-            if letter.isalpha() == True:
-              letter_index = alphabet.find(letter.lower())
-              if letter.isupper() == True:
-                result += shifted_alphabet[letter_index].upper()
-              else:
-                result += shifted_alphabet[letter_index]
-            else:
-              result += letter
+      if letter.isupper() == True:
+        result += shifted_alphabet[letter_index].upper()
+      else:
+        result += shifted_alphabet[letter_index]
+    else:
+      result += letter
 
-          return ''.join(result)
+  return ''.join(result)
         </code></pre>
       </section>
 
