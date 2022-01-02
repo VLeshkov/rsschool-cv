@@ -1,11 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .wrapper {
   margin-left: 20%;
   margin-right: 20%;
-  font-family: sans-serif;
 }
+
+.upper-container {
+  background-color: rgb(208, 242, 253);
+  display: flex;
+  justify-content:space-between;
+  height: 180px;
+}
+
+.contacts li {
+  list-style: none;
+  text-align: right;
+  font-weight: 300;
+}
+
 h1 {
+  font-weight: 300;
   margin-bottom: 0%;
-  font-size: 48px;
+  font-size: 70px;
 }
 h2 {
   margin-bottom: 0%;

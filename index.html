@@ -1,104 +1,153 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Victor Leshkov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="wrapper">
+      <div class="upper-container">
         <h1>Victor Leshkov</h1>
-        <hr>
-        <h2>Contacts</h2>
-        <p>Email: leshkovvictor@gmail.com<br>
-        Telegram: @vleshkov</p>
+
+        <div class="contacts">
+          <ul>
+            <li>
+              <a href=""></a>leshkovvictor@gmail.com
+              <img src="assets/envelope-fill.svg" alt="Email" />
+            </li>
+            <li>
+              <a href="github.com/vleshkov"></a>vleshkov
+              <img src="assets/github.svg" alt="Github" />
+            </li>
+            <li>
+              <a href="linkedin.com/in/victor-leshkov-2b929277">LinkedIn</a>
+              <img src="assets/linkedin.svg" alt="LinkedIn" />
+            </li>
+            <li>
+              <a href="">@vleshkov</a>
+              <img src="assets/telegram.svg" alt="Telegram" />
+            </li>
+            <li>
+              <a href="VK: https://www.facebook.com/victor.leshkov/"></a
+              >victor.leshkov <img src="assets/facebook.svg" alt="Facebook" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lower-container">
         <h2>About myself</h2>
-        <p>Beginner Frontend developer. My development path began in may 2021 when I started Python
-            courses at Stepik. Currently I learn Frontent development at RS School and want to become a Junior
-            Frontend Developer.</p>
+        <p>
+          Beginner Frontend developer. My development path began in may 2021 when
+          I started Python courses at Stepik. Currently I learn Frontent
+          development at RS School and want to become a Junior Frontend Developer.
+        </p>
         <h2>Skills</h2>
         <p>Javascript, Typescript, HTML, CSS, Python, Git.</p>
         <h2>Code Examples</h2>
         <p>Here are some katas solutions from Codewars.</p>
         <p>
-            <a href="https://www.codewars.com/kata/57b06f90e298a7b53d000a86/">Kata description</a><br>
-        Javascript solution:</p>
+          <a href="https://www.codewars.com/kata/57b06f90e298a7b53d000a86/"
+            >Kata description</a
+          ><br />
+          Javascript solution:
+        </p>
 
         <pre>
-            <code>
-                function queueTime(customers, n) {
-                let tills = [];
-                for (let i = 0; i &lt; n; i++) {
-                tills.push(0);
-                }
+              <code>
+                  function queueTime(customers, n) {
+                  let tills = [];
+                  for (let i = 0; i &lt; n; i++) {
+                  tills.push(0);
+                  }
 
-                for (let customer of customers) {
-                tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
-                }
+                  for (let customer of customers) {
+                  tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
+                  }
 
-                return Math.max.apply(null, tills);
-                }
-            </code>
-        </pre>
+                  return Math.max.apply(null, tills);
+                  }
+              </code>
+          </pre>
 
         <p>
-            <a href="https://www.codewars.com/kata/52223df9e8f98c7aa7000062/">Kata description</a><br>
-        Python solution:</p>
+          <a href="https://www.codewars.com/kata/52223df9e8f98c7aa7000062/"
+            >Kata description</a
+          ><br />
+          Python solution:
+        </p>
 
         <pre>
-            <code>
-                def rot13(message):
-                alphabet = ''.join([chr(i) for i in range(97,123)])
-                result = []
+              <code>
+                  def rot13(message):
+                  alphabet = ''.join([chr(i) for i in range(97,123)])
+                  result = []
 
-                shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
+                  shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
 
-                for letter in message:
-                if letter.isalpha() == True:
-                letter_index = alphabet.find(letter.lower())
-                if letter.isupper() == True:
-                result += shifted_alphabet[letter_index].upper()
-                else:
-                result += shifted_alphabet[letter_index]
-                else:
-                result += letter
+                  for letter in message:
+                  if letter.isalpha() == True:
+                  letter_index = alphabet.find(letter.lower())
+                  if letter.isupper() == True:
+                  result += shifted_alphabet[letter_index].upper()
+                  else:
+                  result += shifted_alphabet[letter_index]
+                  else:
+                  result += letter
 
-                return ''.join(result)
-            </code>
-        </pre>
+                  return ''.join(result)
+              </code>
+          </pre>
 
         <h2>Experience</h2>
-        <p>Currently I learn Javascript at [learn.javascript.ru](https://learn.javascript.ru/) and JS/Frontend course
-            at RS School.</p>
+        <p>
+          Currently I learn Javascript at
+          [learn.javascript.ru](https://learn.javascript.ru/) and JS/Frontend
+          course at RS School.
+        </p>
         <p>Certificates:</p>
         <ol>
-            <li>Программирование на Python (Python programming).
-                <a href="https://stepik.org/cert/987494">Certificate</a>
-            </li>
-            <li>"Поколение Python": курс для начинающих (Python generation: beginners course).
-                <a href="https://stepik.org/cert/1007833">Certificate</a>
-            </li>
+          <li>
+            Программирование на Python (Python programming).
+            <a href="https://stepik.org/cert/987494">Certificate</a>
+          </li>
+          <li>
+            "Поколение Python": курс для начинающих (Python generation: beginners
+            course).
+            <a href="https://stepik.org/cert/1007833">Certificate</a>
+          </li>
         </ol>
         <h2>Education</h2>
         <p>Self-taught. Stepik Python courses. RSSchool Frontend.</p>
         <h2>English level</h2>
         <p>Intermediate</p>
+      </div>
     </div>
-
-<footer>
-    <div class="wrapper">
-        <hr>
+    <footer>
+      <div class="wrapper">
+        <hr />
         <p>
-            <a href="https://github.com/vleshkov/">github.com/vleshkov</a>, 2021
+          <a href="https://github.com/vleshkov/">github.com/vleshkov</a>, 2021
         </p>
         <p>
-            <a href="https://rs.school/js/">
-                <img src="https://rs.school/images/rs_school_js.svg" alt="RS School logo" height="30">
-            </a>
+          <a href="https://rs.school/js/">
+            <img
+              src="https://rs.school/images/rs_school_js.svg"
+              alt="RS School logo"
+              height="30"
+            />
+          </a>
         </p>
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
