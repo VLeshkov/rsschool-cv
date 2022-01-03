@@ -15,45 +15,64 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="upper-container">
+      <header class="upper-container">
         <h1>Victor Leshkov</h1>
-
         <div class="contacts">
           <ul>
             <li>
-              <a href=""></a>leshkovvictor@gmail.com
+              <a href="mailto:leshkovvictor@gmail.com">leshkovvictor@gmail.com</a>
               <img src="assets/envelope-fill.svg" alt="Email" />
             </li>
             <li>
-              <a href="github.com/vleshkov"></a>vleshkov
+              <a href="github.com/vleshkov">vleshkov</a>
               <img src="assets/github.svg" alt="Github" />
             </li>
             <li>
-              <a href="linkedin.com/in/victor-leshkov-2b929277">LinkedIn</a>
+              <a href="linkedin.com/in/victor-leshkov-2b929277">victor-leshkov</a>
               <img src="assets/linkedin.svg" alt="LinkedIn" />
             </li>
             <li>
-              <a href="">@vleshkov</a>
+              <a href="https://t.me/vleshkov">@vleshkov</a>
               <img src="assets/telegram.svg" alt="Telegram" />
             </li>
             <li>
-              <a href="VK: https://www.facebook.com/victor.leshkov/"></a
-              >victor.leshkov <img src="assets/facebook.svg" alt="Facebook" />
+              <a href="https://www.facebook.com/victor.leshkov/">victor.leshkov</a>
+              <img src="assets/facebook.svg" alt="Facebook"/>
             </li>
           </ul>
         </div>
-      </div>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#code">Code Examples</a></li>
+          <li><a href="#exp">Experience</a></li>
+          <li><a href="#ed">Education</a></li>
+          <li><a href="#languages">Languages</a></li>
+        </ul>
+      </nav>
 
-      <div class="lower-container">
-        <h2>About myself</h2>
-        <p>
-          Beginner Frontend developer. My development path began in may 2021 when
-          I started Python courses at Stepik. Currently I learn Frontent
-          development at RS School and want to become a Junior Frontend Developer.
-        </p>
-        <h2>Skills</h2>
+      <main class="lower-container">
+        <div class="header">
+          <h2 id ="about">About myself</h2>
+        </div>
+        <div class="about">
+          <p>
+            Beginner Frontend developer. My development path began in may 2021 when
+            I started Python courses at Stepik. Currently I learn Frontent
+            development at RS School and want to become a Junior Frontend Developer.
+          </p>
+          <div>
+            <img src="assets/userpic.png" alt="Userpic" class="userpic">
+          </div>
+        </div>
+
+
+        <h2 id="skills">Skills</h2>
         <p>Javascript, Typescript, HTML, CSS, Python, Git.</p>
-        <h2>Code Examples</h2>
+        <p></p>
+        <h2 id="code">Code Examples</h2>
         <p>Here are some katas solutions from Codewars.</p>
         <p>
           <a href="https://www.codewars.com/kata/57b06f90e298a7b53d000a86/"
@@ -65,16 +84,16 @@
         <pre>
               <code>
                   function queueTime(customers, n) {
-                  let tills = [];
-                  for (let i = 0; i &lt; n; i++) {
-                  tills.push(0);
-                  }
+                    let tills = [];
+                    for (let i = 0; i &lt; n; i++) {
+                      tills.push(0);
+                    }
 
-                  for (let customer of customers) {
-                  tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
-                  }
+                    for (let customer of customers) {
+                      tills[tills.indexOf(Math.min.apply(null, tills))] += Number(customer);
+                    }
 
-                  return Math.max.apply(null, tills);
+                    return Math.max.apply(null, tills);
                   }
               </code>
           </pre>
@@ -89,32 +108,37 @@
         <pre>
               <code>
                   def rot13(message):
-                  alphabet = ''.join([chr(i) for i in range(97,123)])
-                  result = []
+                    alphabet = ''.join([chr(i) for i in range(97,123)])
+                    result = []
 
-                  shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
+                    shifted_alphabet =  ''.join(alphabet)[-13:] + ''.join(alphabet)[:-13]
 
-                  for letter in message:
-                  if letter.isalpha() == True:
-                  letter_index = alphabet.find(letter.lower())
-                  if letter.isupper() == True:
-                  result += shifted_alphabet[letter_index].upper()
-                  else:
-                  result += shifted_alphabet[letter_index]
-                  else:
-                  result += letter
+                    for letter in message:
+                      if letter.isalpha() == True:
+                        letter_index = alphabet.find(letter.lower())
+                        if letter.isupper() == True:
+                          result += shifted_alphabet[letter_index].upper()
+                        else:
+                          result += shifted_alphabet[letter_index]
+                      else:
+                      result += letter
 
-                  return ''.join(result)
+                    return ''.join(result)
               </code>
           </pre>
 
-        <h2>Experience</h2>
-        <p>
-          Currently I learn Javascript at
-          [learn.javascript.ru](https://learn.javascript.ru/) and JS/Frontend
-          course at RS School.
-        </p>
-        <p>Certificates:</p>
+        <h2 id="exp">Experience</h2>
+        Here are some my projects:
+        <ol>
+          <li><a href="https://rolling-scopes-school.github.io/vleshkov-JSFEPRESCHOOL/vertical-slider/">Vertical Slider</a></li>
+          <li><a href="https://rolling-scopes-school.github.io/vleshkov-JSFEPRESCHOOL/museum/">Museum</a></li>
+          <li><a href="https://vleshkov.github.io/hyperskill/piano/index.html">Piano</a></li>
+          <li><a href="https://vleshkov.github.io/hyperskill/to-do-list/index.html">To-Do List</a></li>
+        </ol>
+
+        <h2 id="ed">Education</h2>
+        <p>Omsk State Medical University (gr. 2017). Stepik Python courses. Jetbrains Academy. RSSchool Frontend.</p>
+        <h3>Certificates:</h3>
         <ol>
           <li>
             Программирование на Python (Python programming).
@@ -125,18 +149,20 @@
             course).
             <a href="https://stepik.org/cert/1007833">Certificate</a>
           </li>
+          <li>
+            Javascript для начинающих (Javascript for beginners).
+            <a href="https://stepik.org/cert/1033628">Certificate</a>
+          </li>
         </ol>
-        <h2>Education</h2>
-        <p>Self-taught. Stepik Python courses. RSSchool Frontend.</p>
-        <h2>English level</h2>
+        <h2 id="languages">English level</h2>
         <p>Intermediate</p>
-      </div>
+      </main>
     </div>
     <footer>
       <div class="wrapper">
         <hr />
         <p>
-          <a href="https://github.com/vleshkov/">github.com/vleshkov</a>, 2021
+          <a href="https://github.com/vleshkov/">github.com/vleshkov</a>, 2022
         </p>
         <p>
           <a href="https://rs.school/js/">
